@@ -28,6 +28,13 @@ function App() {
       spotify.getUserPlaylists().then(playlists => {
         dispatch({ type: "SET_PLAYLISTS", playlists: playlists });
       })
+
+      spotify.getPlaylist('2tSXmdubM4D8ctffuqYSUU').then((response) => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discoverWeekly: response
+        })
+      })
     }
   }, []);
 
