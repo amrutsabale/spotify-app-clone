@@ -8,7 +8,7 @@ import { useDataLayerValue } from './DataLayer';
 
 
 export default function SideBar() {
-    const [{ playlists }, dispatch] = useDataLayerValue();
+    const [{ playlists }] = useDataLayerValue();
     return (
         <div className="sidebar">
             <img
@@ -25,9 +25,6 @@ export default function SideBar() {
             {playlists?.items?.map(playlist => {
                 return <SidebarOption title={playlist.name} />
             })}
-            <SidebarOption title="Hip pop" />
-            <SidebarOption title="Rock" />
-            <SidebarOption title="RnB" />
 
 
         </div>

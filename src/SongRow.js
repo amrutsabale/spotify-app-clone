@@ -4,7 +4,6 @@ function SongRow({ track = 'test' }) {
     return (
 
         < div className="songRow" >
-            {console.log("ddd", track)}
             <img className="songRow_alubum" src={track.album.images[0].url} alt="" />
             <div className="songRow_info">
                 <h1>{track.name}</h1>

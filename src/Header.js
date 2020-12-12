@@ -4,7 +4,7 @@ import React from 'react'
 import { useDataLayerValue } from './DataLayer'
 import './Header.css'
 function Header() {
-    const [{ user }, dispatch] = useDataLayerValue()
+    const [{ user }] = useDataLayerValue()
 
     return (
         <div className="header">
